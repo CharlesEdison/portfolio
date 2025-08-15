@@ -1,103 +1,113 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Profile Image Placeholder */}
+          <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+            <span className="text-white text-4xl font-bold">CL</span>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Name and Title */}
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+            Charles Edisonom
+          </h1>
+          
+          <h2 className="text-2xl md:text-3xl text-gray-600 mb-6">
+            Full Stack Developer
+          </h2>
+
+          {/* Brief Description */}
+          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Passionate about creating beautiful, functional web applications. 
+            Currently learning React and building modern user experiences 
+            with cutting-edge technologies.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+              View My Work
+            </button>
+            <button className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+              Get In Touch
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Quick Stats/Skills Preview */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">Frontend</div>
+              <p className="text-gray-600">React, TypeScript, Tailwind CSS</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-3xl font-bold text-green-600 mb-2">Backend</div>
+              <p className="text-gray-600">Node.js, Express, Databases</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-3xl font-bold text-purple-600 mb-2">Tools</div>
+              <p className="text-gray-600">Git, VS Code, Figma</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Preview */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Featured Projects
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Project 1 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+                <span className="text-white text-xl font-semibold">Project Screenshot</span>
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  Portfolio Website
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  A modern portfolio built with Next.js and Tailwind CSS
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Next.js</span>
+                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Tailwind</span>
+                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 2 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="h-48 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center">
+                <span className="text-white text-xl font-semibold">Coming Soon</span>
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  Next Project
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  Exciting new project in development
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">React</span>
+                  <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">Node.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
